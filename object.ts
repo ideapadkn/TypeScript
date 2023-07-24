@@ -1,5 +1,5 @@
 import axios from "axios"
-
+/*
 const url = 'https://jsonplaceholder.typicode.com/todos/1'
 
 interface Todo {
@@ -24,4 +24,31 @@ function logTodo(id: number, title: string, completed: boolean) {
     Title: ${title}
     IS todo finished: ${completed}
   `)
+}
+*/
+
+type TypeUser = {
+  name: string,
+  age: number
+}
+
+type TypeAddress = {
+  city: string,
+  country: string
+}
+
+const user: TypeUser = {
+  name: 'Kamron',
+  age: 20
+}
+
+const address: TypeAddress = {
+  city: 'Tashkent',
+  country: 'Uzbekistan'
+}
+
+let common: TypeAddress & TypeUser
+
+common = {
+  ...user, ...address
 }
